@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 export const FriendList = ( {friends} ) => {
     return (
@@ -14,10 +14,10 @@ export const FriendList = ( {friends} ) => {
     )
 }
 
-// FriendList.propTypes = {
-//     id: PropTypes.number.isRequired,
-//     avatar: PropTypes.string.isRequired,
-//     name: PropTypes.string.isRequired,
-//     isOnline: PropTypes.bool.isRequired
-//   }
+FriendList.propTypes = {
+    id: PropTypes.number,
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    isOnline: PropTypes.bool
+  }
 

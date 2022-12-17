@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 export const FriendListItem = ( {items} ) => {
     return (
@@ -14,9 +14,9 @@ export const FriendListItem = ( {items} ) => {
             <tbody>
             {items.map(e => (
                 <tr kay={e.id}>
-                    <td>{e.type}</td>
-                    <td>{e.amount}</td>
-                    <td>{e.currency}</td>
+                    <td kay={e.id.toString().slice(0, 7)}>{e.type}</td>
+                    <td kay={e.id.toString().slice(9, 12)}>{e.amount}</td>
+                    <td kay={e.id.toString().slice(14, 17)}>{e.currency}</td>
                 </tr>
             ))}    
             </tbody>
@@ -24,9 +24,9 @@ export const FriendListItem = ( {items} ) => {
     )
 }
 
-// FriendListItem.propTypes = {
-//     id: PropTypes.string.isRequired,
-//     type: PropTypes.string.isRequired,
-//     amount: PropTypes.string.isRequired,
-//     currency: PropTypes.string.isRequired
-//   }
+FriendListItem.propTypes = {
+    id: PropTypes.number,
+    type: PropTypes.string,
+    amount: PropTypes.number,
+    currency: PropTypes.string
+  }
