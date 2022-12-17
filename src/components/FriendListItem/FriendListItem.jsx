@@ -1,3 +1,5 @@
+// import PropTypes from "prop-types";
+
 export const FriendListItem = ( {items} ) => {
     return (
         <><table className="transaction-history">
@@ -21,3 +23,10 @@ export const FriendListItem = ( {items} ) => {
         </table></>
     )
 }
+
+// FriendListItem.propTypes = {
+//     id: PropTypes.string.isRequired,
+//     type: PropTypes.string.isRequired,
+//     amount: PropTypes.string.isRequired,
+//     currency: PropTypes.string.isRequired
+//   }
