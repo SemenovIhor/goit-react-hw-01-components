@@ -1,9 +1,13 @@
-export const FriendList = ({avatar, name, isOnline }) => {
+export const FriendList = ( {friends} ) => {
     return (
-        <li className="item">
-            <span className="status"></span>
-            <img className="avatar" src={avatar} alt="User avatar" width="48" />
-            <p className="name"></p>
-        </li>
-    );
-};
+        <ul>
+        {friends.map( e => (
+            <li className="item" key={e.id}>
+                <span className="status"></span>
+                <img className="avatar" src={e.avatar} alt="User avatar" width="48" />
+                <p className="name">{e.name}</p>
+            </li>
+        ))}
+        </ul>
+    )
+}
