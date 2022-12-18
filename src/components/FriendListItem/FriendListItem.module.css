@@ -1,0 +1,23 @@
+table {
+    border-collapse: collapse;
+  }
+
+.transaction_history{
+    width: 300px;
+    text-align: center;
+}
+
+.table_head {
+    padding-top: px;
+    padding-bottom: 5px;
+    background-color: rgb(133, 181, 226);
+    border: 1px solid #aac4db;
+}
+
+.table_body:nth-child(2n + 1) {
+    background-color: rgb(253, 253, 253);
+} 
+
+.table_body:nth-child(2n) {
+    background-color: #aac4db;
+} 

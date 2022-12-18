@@ -1,13 +1,18 @@
 import PropTypes from "prop-types";
+import styles from './/Statistics.module.css'
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title="Upload stats", stats }) => {
     return (
-        <section className="statistics">
+        <section className={styles.statistics}>
             {title && <h2>{title}</h2>}
 
-            <ul className="stat-list">
+            <ul className={styles.stat_list}>
                 {stats.map( e => (
-                    <li className="item" key={e.id}>
+                    <li 
+                    style={{
+                        backgroundColor:getRandomHexColor(),
+                      }}
+                    className={styles.item} key={e.id}>
                         <span className="label">{e.label}</span>
                         <span className="percentage">{e.percentage}%</span>
                     </li>
@@ -22,3 +27,9 @@ Statistics.propTypes = {
     label: PropTypes.string,
     percentage: PropTypes.number
   }
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
